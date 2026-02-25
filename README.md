@@ -14,7 +14,6 @@ hexo-blog/
 ├── source/                  # 博客源文件
 │   └── _posts/             # 博客文章
 ├── themes/                  # 主题目录
-│   └── hexo-theme-stellar-1.33.1/  # Stellar 主题
 ├── scaffolds/              # 文章模板
 ├── vercel.json             # Vercel 部署配置
 └── public/                 # 生成的静态文件（构建后）
