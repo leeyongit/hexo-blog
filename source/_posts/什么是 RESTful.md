@@ -10,7 +10,7 @@ categories:
 permalink: what-is-restful/
 ---
 
-![](/images/posts/restful.jpg)
+![](/images/posts/what-is-restful-1.jpg)
 
 * 看Url就知道要什么
 * 看http method就知道干什么

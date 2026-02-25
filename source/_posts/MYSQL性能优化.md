@@ -27,7 +27,7 @@ permalink: mysql-performance-optimization/
 - 良好的网站功能体验
 
 ## 可以从几个方面进行数据库优化
-![mysql数据库优化](/images/posts/mysql.png)
+![mysql数据库优化](/images/posts/mysql-performance-optimization-1.png)
 
 ### 优化无非是从三个角度入手：
 - 第一个是从硬件，增加硬件，增加服务器

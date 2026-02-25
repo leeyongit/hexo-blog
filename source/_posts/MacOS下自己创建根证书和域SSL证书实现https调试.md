@@ -48,11 +48,11 @@ $ openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.p
 
 打开【钥匙串访问】，左侧【钥匙串】选择【系统】，【种类】选择【证书】，然后把刚才生成的根证书导入进来（根证书是rootCA.pem）。
 
-![1](/images/posts/adtuo.png)
+![1](/images/posts/macos-create-ssl-certificates-1.png)
 
 双击此证书，在【信任】设置中，SSL和X.509基本策略两项选择【始终信任】。
 
-![2](/images/posts/gku87.png)
+![2](/images/posts/macos-create-ssl-certificates-2.png)
 
 ## 生成域SSL证书
 
@@ -108,4 +108,4 @@ server {
 }
 ```
 
-![3](/images/posts/ddur9.png)
+![3](/images/posts/macos-create-ssl-certificates-3.png)
