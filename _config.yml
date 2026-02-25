@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 代码分享
-subtitle: ""
-description: ""
+title: 李永博客
+subtitle: "分享技术、生活、思考"
+description: "李永博客，分享技术、生活、思考"
 keywords:
 author: Lee Yong
 language: zh-CN
@@ -99,7 +99,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: hexo-theme-stellar-1.33.1
+theme: stellar
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
