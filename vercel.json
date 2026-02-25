@@ -1,5 +1,17 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../.."
+  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../..",
+  "routes": [
+    {
+      "src": "^/(?!.*\\.).*$",
+      "dest": "/$0/index.html",
+      "continue": true
+    },
+    {
+      "src": "/.*",
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ]
 }
