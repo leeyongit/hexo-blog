@@ -1,11 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../..",
-  "nodeVersion": "18.x",
-  "regions": ["sfo1"],
-  "env": {
-    "CI": "true"
-  },
-  "crons": []
+  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../.."
 }
