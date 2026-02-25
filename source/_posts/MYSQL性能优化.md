@@ -8,9 +8,11 @@ categories:
   - 数据库
   - MySQL
 permalink: mysql-performance-optimization/
+mermaid: true
 ---
 
 ## 数据库优化的目的
+
 #### 避免出现页面访问错误
 
 - 由于数据库连接timeout阐述页面5xx错误
@@ -27,30 +29,63 @@ permalink: mysql-performance-optimization/
 - 良好的网站功能体验
 
 ## 可以从几个方面进行数据库优化
-![mysql数据库优化](/images/posts/mysql-performance-optimization-1.png)
+
+```mermaid
+graph LR
+  root((MySQL优化))
+  root --> A(硬件和OS调优)
+  root --> B(MySQL系统配置)
+  root --> C(MySQL表结构优化)
+  root --> D(SQL查询及索引优化)
+
+  A --> A1(增加硬件/服务器)
+  B --> B1(开启查询缓存)
+  B --> B2(增加缓存大小)
+  B --> B3(读写分离/多端口)
+  C --> C1(选择合适存储引擎)
+  C --> C2(数据列加索引)
+  C --> C3(节制使用触发器)
+  C --> C4(数据类型最小化)
+  D --> D1(慢查询日志)
+  D --> D2(Explain分析)
+  D --> D3(避免Count全表)
+  D --> D4(最小化数据查询)
+  D --> D5(Limit优化)
+  D --> D6(避免Order By Rand)
+  D --> D7(合理建立索引)
+  D --> D8(Join优化)
+  D --> D9(保证索引简单)
+  D --> D10(使用索引排序)
+  D --> D11(Show Processlist)
+```
 
 ### 优化无非是从三个角度入手：
+
 - 第一个是从硬件，增加硬件，增加服务器
 - 第二个就是对我们的MySQL服务器进行优化，增加缓存大小，开多端口，读写分离
 - 第三个就是我们的应用优化，建立索引，优化SQL查询语句，建立缓存等等
 
 ### MySQL服务器硬件和OS（操作系统）调优：
+
 - TODO...
 
 ### MySQL 系统配置：
+
 - 开启查询缓存
 
 ### MySQL 表结构优化：
+
 - 选择合适的存储引擎
 - 在数据列上加上索引(不要过度使用索引，评估你的查询)
 - 有节制的使用触发器
 - 注意你的数据类型，尽可能的使用最小的
 
 ### SQL查询及索引优化：
+
 - 使用慢查询日志slow-log，找出执行慢的查询
 - 使用 EXPLAIN 来决定查询功能是否合适
-- 避免在整个表上使用count(*) ，它可能会将整个表锁住，最好 count一个字段，比如count（id），或者count(1)
-- 最小化你要查询的数据，只获取你需要的数据，通常来说不要使用 *
+- 避免在整个表上使用count(\*) ，它可能会将整个表锁住，最好 count一个字段，比如count（id），或者count(1)
+- 最小化你要查询的数据，只获取你需要的数据，通常来说不要使用 \*
 - 当只要一行数据时使用LIMIT1
 - 避免使用 ORDER BY RAND()
 - 这些操作都是比较耗资源的DISTINCT、COUNT、GROUP BY、各种MySQL函数。
