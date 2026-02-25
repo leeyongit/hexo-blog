@@ -34,7 +34,7 @@
 2. 确认以下配置：
    - **Build Command**: `npm run build`
    - **Output Directory**: `public`
-   - **Install Command**: `npm install && npm --prefix themes/hexo-theme-stellar-1.33.1 install`
+   - **Install Command**: `npm install`
 
 #### 2.2 如果上面的命令出错，改为下面的方式：
 
@@ -93,7 +93,7 @@ git push origin main
 
 ```bash
 # 错误：Cannot find module 'probe-image-size'
-# 解决：已在 vercel.json 中配置了主题依赖安装
+# 解决：确保 npm install 已完成（主题依赖由 npm 包自动安装）
 
 # 错误：npm ERR! code EACCES
 # 解决：某些文件权限问题，通常在重新按流程部署会解决
@@ -210,7 +210,8 @@ git push origin main
 
 ```json
 {
-  "buildCommand": "npm install && npm --prefix themes/hexo-theme-stellar-1.33.1 install && npm run build",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
   "nodeVersion": "18.x"
 }
