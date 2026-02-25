@@ -1,11 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../..",
-  "rewrites": [
-    {
-      "source": "/:path((?!.*\\.).*)",
-      "destination": "/$1/index.html"
-    }
-  ]
+  "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../.."
 }
