@@ -67,18 +67,78 @@ graph LR
 
 ### MySQL服务器硬件和OS（操作系统）调优：
 
-- TODO...
+- CPU
+  - OLTP 优先选择高主频的 CPU，开启性能模式，避免节能降频
+  - 关闭 BIOS 中的 C-States（如遇到抖动问题时评估关闭）
+- 内存
+  - 保障充足的物理内存，InnoDB Buffer Pool 预算为系统内存的 60%~80%
+  - 降低或禁用交换分区：vm.swappiness=1，尽量避免 MySQL 发生 swap
+- 磁盘与文件系统
+  - 优先 SSD/NVMe，RAID10 提升读写与可靠性
+  - 文件系统建议 ext4/xfs，并使用 noatime,nodiratime 挂载选项
+  - SSD 的 I/O 调度器使用 none/noop
+- OS 参数（示例）
+  - fs.file-max 调大；配合 ulimit -n 提升进程可打开文件数
+  - net.core.somaxconn=1024，net.ipv4.ip_local_port_range=10000 65000
+  - net.ipv4.tcp_tw_reuse=1，net.ipv4.tcp_fin_timeout=30
+  - vm.dirty_ratio=10，vm.dirty_background_ratio=5
+
+  示例：
+
+  ```
+  # /etc/sysctl.conf
+  fs.file-max = 1000000
+  net.core.somaxconn = 1024
+  net.ipv4.ip_local_port_range = 10000 65000
+  net.ipv4.tcp_tw_reuse = 1
+  net.ipv4.tcp_fin_timeout = 30
+  vm.swappiness = 1
+  vm.dirty_ratio = 10
+  vm.dirty_background_ratio = 5
+  ```
+
+  ```
+  # /etc/security/limits.conf
+  mysql soft nofile 102400
+  mysql hard nofile 102400
+  ```
+
+- NUMA / 透明大页
+  - 关闭透明大页（Transparent Huge Pages），减少内存抖动
+  - NUMA 机器建议使用 numactl --interleave=all 启动或在操作系统层面优化分配
+- 时间同步与监控
+  - 保持 NTP 时间同步；iostat、vmstat、pidstat、sar 持续观测 I/O/CPU/上下文切换
+  - 使用 fio/sysbench 做存储与数据库基准测试，评估容量与上限
 
 ### MySQL 系统配置：
 
-- 开启查询缓存
+- 版本建议与查询缓存
+  - MySQL 8.0 已移除查询缓存（Query Cache），建议通过应用与 Redis/Memcached 做缓存
+- InnoDB 关键参数
+  - innodb_buffer_pool_size：占物理内存的 60%~80%
+  - innodb_log_file_size / innodb_redo_log_capacity：根据写入量与恢复目标设置
+  - innodb_flush_log_at_trx_commit：1 保证最强持久性；2/0 提升性能需评估风险
+  - innodb_flush_method=O_DIRECT 减少双缓存；innodb_io_capacity/innodb_io_capacity_max 配合磁盘能力
+  - innodb_buffer_pool_instances：在大 buffer 时适度分片
+- 连接与线程
+  - max_connections：结合业务并发与硬件设置上限，避免 OOM
+  - thread_cache_size、table_open_cache、open_files_limit 与 OS ulimit 配套调优
+- 临时表与排序
+  - tmp_table_size 与 max_heap_table_size 一致且足量，减少临时表落盘
+  - 增强 sort/join 相关内存参数但需监控以防过度占用
+- 复制与高可用
+  - 二进制日志（binlog）与 GTID 打开并合理设置 binlog_expire_logs_seconds
+  - 使用半同步复制提升数据安全；搭建主从/组复制作为高可用基础
 
 ### MySQL 表结构优化：
 
 - 选择合适的存储引擎
 - 在数据列上加上索引(不要过度使用索引，评估你的查询)
 - 有节制的使用触发器
-- 注意你的数据类型，尽可能的使用最小的
+- 根据最左前缀原则设计联合索引，尽量让常用查询成为覆盖索引
+- 控制行宽与列类型（如合理使用 VARCHAR / TEXT），避免超长行导致页分裂与缓冲命中下降
+- 谨慎使用分区表（Partition），明确分区键与查询模式
+- 归档历史数据，冷热分层，降低核心表体量
 
 ### SQL查询及索引优化：
 
