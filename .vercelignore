@@ -1,0 +1,27 @@
+# 不需要部署的文件和目录
+.git
+.gitignore
+node_modules/
+.npm
+.DS_Store
+Thumbs.db
+*.md
+!README.md
+.env
+.env.local
+.vercel
+.vercel_build_output
+
+# 主题中不是必需的文件
+themes/*/LICENSE
+themes/*/README.md
+themes/*/.git
+themes/*/docs
+themes/*/.github
+
+# 本地开发文件
+.env.example
+.idea/
+.vscode/
+*.swp
+*~

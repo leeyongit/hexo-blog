@@ -142,6 +142,39 @@ vercel --prod
 本地编辑 → git push → GitHub 更新 → Vercel 自动构建 → 站点更新
 ```
 
+#### ⚠️ 如果没有自动部署，请按以下快速修复步骤：
+
+**问题排查（按顺序尝试）：**
+
+1. **重新连接 GitHub**
+   - 登录 [Vercel Dashboard](https://vercel.com/dashboard)
+   - 进入项目 → Settings → Git → Disconnect GitHub
+   - 重新点击 Connect GitHub 重新授权
+
+2. **验证分支配置**
+   - Settings → Git → Deploying Branches
+   - 确保 `main` 分支在列表中
+
+3. **手动触发部署测试**
+   - 点击 **Deployments** 标签
+   - 点击 **Create Deployment**
+   - 选择 `main` 分支，点击 Deploy 进行测试
+
+4. **查看构建日志**
+   - 如果测试部署失败，点击失败的部署
+   - 查看 **Build Logs** 找出错误信息
+
+**完整排查指南**: 详见 [VERCEL_DEPLOYMENT_GUIDE.md](VERCEL_DEPLOYMENT_GUIDE.md)
+
+#### 本地测试构建
+
+确保本地能正常构建，再进行 Vercel 部署：
+
+```bash
+npm run build
+ls -la public/  # 检查是否生成了静态文件
+```
+
 ### 常见管理任务
 
 #### 1. 发布新文章
