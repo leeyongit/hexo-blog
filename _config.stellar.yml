@@ -1,0 +1,26 @@
+article:
+  type: tech # tech/story
+
+# 侧边栏主功能导航菜单
+menubar:
+  columns: 4 # 一行多少个
+  items: # 可按照自己需求增加，符合以下格式即可
+    - id: home
+      theme: "#1BCDFC"
+      title: 首页
+      icon: solar:planet-bold-duotone
+      url: /
+    - id: categories
+      title: 分类
+      icon: default:category
+      url: /categories/
+    - id: tags
+      theme: "#3DC550"
+      title: 标签
+      icon: solar:hashtag-square-bold
+      url: /tags/
+    - id: about
+      theme: "#FA6400"
+      title: 关于
+      icon: solar:notebook-bookmark-bold-duotone
+      url: /about/
