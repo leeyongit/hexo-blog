@@ -42,7 +42,7 @@
 # Build Command
 npm run build
 
-# Install Command  
+# Install Command
 npm install
 
 # 注意：需要在 Vercel Dashboard 里手动在 Build Command 之前增加一个步骤
@@ -242,9 +242,8 @@ themes/*/node_modules/
 
 以下是最常见的 3 个问题和快速修复：
 
-| 问题 | 原因 | 解决方案 |
-|------|------|---------|
-| 没有部署记录 | GitHub 连接失效 | 重新授权 Vercel 访问 GitHub |
-| 部署失败 | 构建命令错误 | 检查 `npm run build` 本地是否能运行 |
-| 网站未更新 | CDN 缓存/DNS | Vercel Dashboard 清除缓存或等待冷启动 |
-
+| 问题         | 原因            | 解决方案                              |
+| ------------ | --------------- | ------------------------------------- |
+| 没有部署记录 | GitHub 连接失效 | 重新授权 Vercel 访问 GitHub           |
+| 部署失败     | 构建命令错误    | 检查 `npm run build` 本地是否能运行   |
+| 网站未更新   | CDN 缓存/DNS    | Vercel Dashboard 清除缓存或等待冷启动 |

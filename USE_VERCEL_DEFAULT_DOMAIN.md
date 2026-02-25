@@ -44,6 +44,7 @@ About：     https://hexo-blog-xxx.vercel.app/about/
 ## ✅ 如果一切正常
 
 访问上面的 URL，应该能看到：
+
 - ✅ 首页正常显示
 - ✅ 所有链接可以访问
 - ✅ 没有 404 错误
@@ -81,16 +82,17 @@ About：     https://hexo-blog-xxx.vercel.app/about/
    - 输入 `codetrue.net`
    - 按提示配置 DNS CNAME 记录
 
-2. **更新 _config.yml**
+2. **更新 \_config.yml**
+
    ```yaml
-   url: https://codetrue.net
+   url: https://blog.codetrue.net
    root: /
    ```
 
 3. **推送更新**
    ```bash
    git add _config.yml
-   git commit -m "Update to custom domain: codetrue.net"
+   git commit -m "Update to custom domain: blog.codetrue.net"
    git push
    ```
 
@@ -98,12 +100,12 @@ About：     https://hexo-blog-xxx.vercel.app/about/
 
 ## 📋 当前配置状态
 
-| 项目 | 配置 | 准备状态 |
-|------|------|--------|
-| vercel.json | 添加了 rewrites 规则 | ✅ 已配置 |
-| _config.yml root | 设为 `/` | ✅ 已配置 |
-| URL 配置 | 暂时使用本地地址（会自适应） | ⏳ 等待认证 |
-| 构建命令 | npm run build | ✅ 已验证 |
+| 项目              | 配置                         | 准备状态    |
+| ----------------- | ---------------------------- | ----------- |
+| vercel.json       | 添加了 rewrites 规则         | ✅ 已配置   |
+| \_config.yml root | 设为 `/`                     | ✅ 已配置   |
+| URL 配置          | 暂时使用本地地址（会自适应） | ⏳ 等待认证 |
+| 构建命令          | npm run build                | ✅ 已验证   |
 
 ---
 
@@ -119,4 +121,3 @@ About：     https://hexo-blog-xxx.vercel.app/about/
 ## 🆘 仍有问题？
 
 参考 [VERCEL_404_FIX.md](VERCEL_404_FIX.md) 或 [VERCEL_DEPLOYMENT_GUIDE.md](VERCEL_DEPLOYMENT_GUIDE.md) 中的详细排查步骤。
-
