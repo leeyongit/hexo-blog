@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 # 使用 Vercel 默认域名时，将下面的 example.vercel.app 替换为你的项目默认域名
-url: https://hexo-blog-inky.vercel.app
+url: https://example.vercel.app
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

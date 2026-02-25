@@ -4,6 +4,38 @@
   "installCommand": "npm install && cd themes/hexo-theme-stellar-1.33.1 && npm install && cd ../..",
   "rewrites": [
     {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/categories",
+      "destination": "/categories/index.html"
+    },
+    {
+      "source": "/categories/",
+      "destination": "/categories/index.html"
+    },
+    {
+      "source": "/tags",
+      "destination": "/tags/index.html"
+    },
+    {
+      "source": "/tags/",
+      "destination": "/tags/index.html"
+    },
+    {
+      "source": "/archives",
+      "destination": "/archives/index.html"
+    },
+    {
+      "source": "/archives/",
+      "destination": "/archives/index.html"
+    },
+    {
       "source": "/:path((?!.*\\.).*)",
       "destination": "/$1/index.html"
     }
