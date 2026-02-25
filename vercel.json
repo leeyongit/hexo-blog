@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "npm install && npm --prefix themes/hexo-theme-stellar-1.33.1 install",
+  "installCommand": "npm install",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/:path((?!.*\\.).*)", "destination": "/:path/index.html" }
