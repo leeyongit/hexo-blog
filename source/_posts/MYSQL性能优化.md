@@ -7,7 +7,7 @@ tags:
 categories:
   - 数据库
   - MySQL
-permalink: mysql-performance-optimization
+permalink: mysql-performance-optimization/
 ---
 
 ## 数据库优化的目的

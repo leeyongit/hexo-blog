@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - Nginx
-permalink: nginx-limit-connections
+permalink: nginx-limit-connections/
 ---
 
 为了防止服务器被恶意采集或ddos攻击给搞死， 所以给限个速。

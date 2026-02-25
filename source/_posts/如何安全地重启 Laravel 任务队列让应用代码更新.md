@@ -8,7 +8,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: safely-restart-laravel-queue
+permalink: safely-restart-laravel-queue/
 ---
 
 要重启 Laravel 的队列工作进程，以使代码更新，可以按照以下步骤操作：

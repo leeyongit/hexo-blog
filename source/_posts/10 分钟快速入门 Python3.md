@@ -7,7 +7,7 @@ tags:
 categories:
   - 后端
   - Python
-permalink: python3-quick-start
+permalink: python3-quick-start/
 ---
 
 Python 是由吉多·范罗苏姆(Guido Van Rossum)在 90 年代早期设计。 它是如今最常用的编程语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。

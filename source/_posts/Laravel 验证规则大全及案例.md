@@ -7,7 +7,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: laravel-validation-rules
+permalink: laravel-validation-rules/
 ---
 
 Laravel 提供了丰富的验证规则，涵盖常见的数据验证需求。以下是常用的 Laravel 验证规则及其对应的示例，帮助你更好地理解和使用这些规则。

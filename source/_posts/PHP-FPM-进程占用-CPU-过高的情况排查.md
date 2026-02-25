@@ -8,7 +8,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: php-fpm-high-cpu-troubleshooting
+permalink: php-fpm-high-cpu-troubleshooting/
 ---
 
 当你遇到 PHP-FPM 进程占用 CPU 高达 100% 的情况时，可以通过以下几个步骤来排查和解决问题：

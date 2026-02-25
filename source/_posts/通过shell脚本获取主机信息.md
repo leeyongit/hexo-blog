@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - Shell
-permalink: get-host-info-with-shell
+permalink: get-host-info-with-shell/
 ---
 
 > 在Windows系统下面，我们通常可以通过查看计算机的属性可以获取到该主机的基本信息，也可以通过一些第三方软件获取主机的基本参数。在Linux系统下，我们可以通过编写shell脚本获取主机的基本参数。shell脚本如下：

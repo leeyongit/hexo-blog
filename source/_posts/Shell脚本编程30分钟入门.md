@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - Shell
-permalink: shell-scripting-quick-start
+permalink: shell-scripting-quick-start/
 ---
 
 ## 什么是Shell脚本

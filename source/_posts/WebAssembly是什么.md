@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - WebAssembly
-permalink: what-is-webassembly
+permalink: what-is-webassembly/
 ---
 
 

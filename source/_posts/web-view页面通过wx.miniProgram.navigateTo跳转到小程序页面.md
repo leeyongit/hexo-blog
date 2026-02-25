@@ -8,7 +8,7 @@ tags:
 categories:
   - 前端
   - 小程序
-permalink: miniprogram-h5-jump
+permalink: miniprogram-h5-jump/
 ---
 
 ### 小程序和H5之间的跳转实现方法

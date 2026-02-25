@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - Linux
-permalink: linux-compression-commands
+permalink: linux-compression-commands/
 ---
 
 linux压缩命令常用的有三个：tar，tgz，gzip，zip

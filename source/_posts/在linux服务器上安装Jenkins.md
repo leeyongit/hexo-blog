@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - Jenkins
-permalink: install-jenkins-on-linux
+permalink: install-jenkins-on-linux/
 ---
 
 Jenkins是用java编写的开源持续集成工具，目前被国内外各公司广泛使用。本章教大家如何在linux服务器上安装Jenkins。

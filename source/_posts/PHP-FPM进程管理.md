@@ -8,7 +8,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: php-fpm-process-manager
+permalink: php-fpm-process-manager/
 ---
 
 ## PHP-FPM

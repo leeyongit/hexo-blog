@@ -9,7 +9,7 @@ tags:
 categories:
   - 技术
   - 分布式锁
-permalink: zookeeper-redis-lock-difference
+permalink: zookeeper-redis-lock-difference/
 ---
 ## 机制和特性的不同
 

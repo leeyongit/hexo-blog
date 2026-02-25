@@ -7,7 +7,7 @@ tags:
 categories:
   - 后端
   - Golang
-permalink: golang-map-implementation-principle
+permalink: golang-map-implementation-principle/
 ---
 
 以 [Go 1.15](https://blog.golang.org/go1.15)

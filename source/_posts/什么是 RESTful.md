@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - HTTP
-permalink: what-is-restful
+permalink: what-is-restful/
 ---
 
 ![](/assets/img/posts/restful.jpg)

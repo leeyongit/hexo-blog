@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - 设计模式
-permalink: strategy-pattern-in-laravel
+permalink: strategy-pattern-in-laravel/
 ---
 
 要统一多个不同但部分逻辑相似的接口成一个 API 接口，可以采用策略模式（Strategy Pattern）来实现。这种设计模式允许你定义一组算法，将它们封装起来，并且使它们可以互相替换。策略模式使得算法可以独立于使用它的客户而变化。

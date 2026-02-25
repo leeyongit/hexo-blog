@@ -9,7 +9,7 @@ tags:
 categories:
   - 后端
   - Golang
-permalink: go-concurrency-goroutine-channel
+permalink: go-concurrency-goroutine-channel/
 ---
 
 如果不是我对真正并行的线程的追求，就不会认识到[Go](http://lib.csdn.net/base/go "Go知识库")有多么的迷人。

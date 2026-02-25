@@ -10,7 +10,7 @@ tags:
 categories:
   - 技术
   - 消息队列
-permalink: docker-redis-beanstalkd-swoole-queue
+permalink: docker-redis-beanstalkd-swoole-queue/
 ---
 
 

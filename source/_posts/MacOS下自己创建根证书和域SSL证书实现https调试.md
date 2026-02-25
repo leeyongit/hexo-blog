@@ -9,7 +9,7 @@ tags:
 categories:
   - 技术
   - HTTP
-permalink: macos-create-ssl-certificates
+permalink: macos-create-ssl-certificates/
 ---
 
 这篇文章是讲关于如何使用 OpenSSL 在本地创建一个 HTTPS 保护的开发环境，本文基于 MacOS。

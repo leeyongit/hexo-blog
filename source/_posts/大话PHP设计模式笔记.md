@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - 设计模式
-permalink: php-design-patterns-notes
+permalink: php-design-patterns-notes/
 ---
 
 ### PSR-0规范

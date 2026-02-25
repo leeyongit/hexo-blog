@@ -7,7 +7,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: php-error-exception-handling
+permalink: php-error-exception-handling/
 ---
 
 PHP（PHP_VERSION >= 7） 的 Error / Exception 的捕获与处理还是值得一说的，优雅处理错误与异常，在提升框架友好度的同时，也提升了开发效率。

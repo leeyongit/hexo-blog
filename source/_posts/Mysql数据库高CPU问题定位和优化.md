@@ -7,7 +7,7 @@ tags:
 categories:
   - 数据库
   - MySQL
-permalink: mysql-high-cpu-problem-optimization
+permalink: mysql-high-cpu-problem-optimization/
 ---
 
 ## 导致mysql数据库CPU高的常见原因

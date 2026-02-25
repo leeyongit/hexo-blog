@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - 消息队列
-permalink: beanstalkd-introduction
+permalink: beanstalkd-introduction/
 ---
 
 ## 一：介绍

@@ -7,7 +7,7 @@ tags:
 categories:
   - 后端
   - PHP
-permalink: php-concurrent-requests
+permalink: php-concurrent-requests/
 ---
 
 后端服务开发中经常会有并发请求的需求，比如你需要获取10家供应商的带宽数据（每个都提供不同的url），然后返回一个整合后的数据，你会怎么做呢？

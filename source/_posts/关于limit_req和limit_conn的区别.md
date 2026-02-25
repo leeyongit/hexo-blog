@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - Nginx
-permalink: limit-req-conn-difference
+permalink: limit-req-conn-difference/
 ---
 
 > 首先，limit_req和limit_conn两个模块都是为了来限流的，但是两者不在一个层面，为了搞清楚这个，必须先要弄清楚request和connection的区别，因为在很多情况下，我们把他们混淆了。

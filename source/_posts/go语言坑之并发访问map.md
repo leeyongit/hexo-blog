@@ -8,7 +8,7 @@ tags:
 categories:
   - 后端
   - Golang
-permalink: go-concurrent-map-access
+permalink: go-concurrent-map-access/
 ---
 
 go提供了一种叫map的数据结构，可以翻译成映射，对应于其他语言的字典、哈希表。借助map，可以定义一个键和值，然后可以从map中获取、设置和删除这个值，尤其适合数据查找的场景。但是map的使用有一定的限制，如果是在单个协程中读写map，那么不会存在什么问题，如果是多个协程并发访问一个map，有可能会导致程序退出，并打印下面错误信息：

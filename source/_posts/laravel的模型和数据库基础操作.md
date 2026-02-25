@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - PHP
-permalink: laravel-model-and-database
+permalink: laravel-model-and-database/
 ---
 
 laravel分为三大数据库操作(DB facade[原始查找]，查询构造器[Query Builder]，Eloquent ORM)：

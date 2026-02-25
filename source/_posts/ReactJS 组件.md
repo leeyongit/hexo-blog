@@ -7,7 +7,7 @@ tags:
 categories:
   - 前端
   - React
-permalink: reactjs-components
+permalink: reactjs-components/
 ---
 
 React 提倡组件化的开发方式，每个组件只关心自己部分的逻辑，使得应用更加容易维护和复用。

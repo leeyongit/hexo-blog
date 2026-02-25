@@ -9,7 +9,7 @@ tags:
 categories:
   - 后端
   - Golang
-permalink: golang-zap-quick-start
+permalink: golang-zap-quick-start/
 ---
 
 ## 1.zap 是什么？

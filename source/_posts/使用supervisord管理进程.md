@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - 运维
-permalink: use-supervisord-manage-processes
+permalink: use-supervisord-manage-processes/
 ---
 
 

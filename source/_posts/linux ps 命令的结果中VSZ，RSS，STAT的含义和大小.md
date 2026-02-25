@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
   - Linux
-permalink: linux-ps-command-vsza-rss-stat
+permalink: linux-ps-command-vsza-rss-stat/
 ---
 
 
