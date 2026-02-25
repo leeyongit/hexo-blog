@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "installCommand": "npm install && npm --prefix themes/hexo-theme-stellar-1.33.1 install"
+}
