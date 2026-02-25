@@ -3,9 +3,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "public",
   "installCommand": "npm install && npm --prefix themes/hexo-theme-stellar-1.33.1 install",
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/:path((?!.*\\.).*)/", "destination": "/:path/index.html" },
-    { "source": "/:path((?!.*\\.).*)", "destination": "/:path/index.html" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1/index.html" }
   ]
 }
