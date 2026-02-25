@@ -101,6 +101,11 @@ ignore:
 # theme: landscape
 theme: stellar
 
+# Mermaid
+mermaid:
+  enable: true
+  version: "9.3.0"
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
