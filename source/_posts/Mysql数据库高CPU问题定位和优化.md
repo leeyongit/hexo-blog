@@ -33,19 +33,19 @@ permalink: mysql-high-cpu-problem-optimization/
 
 1. 首先看看内存 free –m
 
-![img](http://liyong.one/assets/img/posts/20210414/20200513101427168.png)
+![img](/images/posts/20210414/20200513101427168.png)
 
   目前看没有问题，1G的空闲
 
 2. 好了，用我们的必杀技，top看看资源消耗
 
-![img](http://liyong.one/assets/img/posts/20210414/20210414004228679.png)
+![img](/images/posts/20210414/20210414004228679.png)
 
   可以看到服务器负载很高，mysql CPU使用已达到接近400%，基本可以看出mysql是可以进行优化的
 
 3. 进入mysql，执行show full processlist;
 
-![img](http://liyong.one/assets/img/posts/20210414/20200513101518678.png)
+![img](/images/posts/20210414/20200513101518678.png)
 
   这里我们要看的其实就2点：线程数和慢sql
 
@@ -55,11 +55,11 @@ permalink: mysql-high-cpu-problem-optimization/
 
 4. 首先我们先执行show variables like ‘slow_query_log%’;来查看慢日志的路径
 
-![img](http://liyong.one/assets/img/posts/20210414/20200513101539941.png)
+![img](/images/posts/20210414/20200513101539941.png)
 
 5. 我们排查该文件中的慢sql，这里我们看出来了是查询语句直接耗时2秒，explain 该sql发现耗时超过10S
 
-![img](http://liyong.one/assets/img/posts/20210414/text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l3ODA0OTA5NDY1.png)
+![img](/images/posts/20210414/text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l3ODA0OTA5NDY1.png)
 
 ### 数据库注意事项
 
@@ -134,6 +134,5 @@ permalink: mysql-high-cpu-problem-optimization/
 ​	21）不在业务高峰期批量更新或查询数据库，避免在业务高峰期alter表。
 
 ​	22）禁止在主库上执行 sum,count 等复杂的统计分析语句，可以使用从库来执行。
-
 
 
