@@ -27,11 +27,20 @@ hexo-blog/
 ```bash
 # 安装主项目依赖
 npm install
+```
 
-# 安装主题依赖
-cd themes/hexo-theme-stellar-1.33.1
-npm install
-cd ../../
+#### 主题安装（稳定版）
+
+安装方法：
+
+```bash
+npm i hexo-theme-stellar
+```
+
+在博客根目录的 `_config.yml` 中设置：
+
+```yaml
+theme: stellar
 ```
 
 #### 2. 启动开发服务器
@@ -43,6 +52,16 @@ hexo s
 ```
 
 默认访问地址：`http://localhost:4000`
+
+#### 主题更新（稳定版）
+
+```bash
+npm i hexo-theme-stellar
+```
+
+阅读更新日志进行迁移操作。
+
+适用范围：稳定版适用于以内容创作为主，不需要自定义主题，追求稳定和可靠性的用户。
 
 #### 3. 常用命令
 
@@ -300,24 +319,24 @@ A: 在 Vercel Dashboard 的项目 **Settings** → **Git** 中可以暂停自动
 title: 文章标题
 date: 2024-10-10 12:34:56
 tags:
-- 标签1
-- 标签2
+  - 标签1
+  - 标签2
 categories:
-- 分类1
-- 分类2
+  - 分类1
+  - 分类2
 ---
 ```
 
 ### 文章配置选项
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| title | 文章标题 | 必需 |
-| date | 发布日期 | 自动生成 |
-| tags | 标签 | 可选 |
-| categories | 分类 | 可选 |
-| permalink | 自定义链接 | 可选 |
-| excerpt | 摘要 | 可选 |
+| 参数       | 说明       | 默认值   |
+| ---------- | ---------- | -------- |
+| title      | 文章标题   | 必需     |
+| date       | 发布日期   | 自动生成 |
+| tags       | 标签       | 可选     |
+| categories | 分类       | 可选     |
+| permalink  | 自定义链接 | 可选     |
+| excerpt    | 摘要       | 可选     |
 
 ---
 
@@ -353,4 +372,3 @@ MIT
 ## 🤝 贡献
 
 欢迎通过 PR 提交改进建议！
-
