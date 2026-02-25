@@ -215,7 +215,10 @@ git push
 
 #### 2. 修改主题配置
 
-主题配置文件位于：`themes/hexo-theme-stellar-1.33.1/_config.yml`
+主题使用 npm 安装后，配置请在博客根目录进行：
+
+- 在 `_config.yml` 中设置 `theme: stellar`（已在上文安装步骤说明）
+- 主题选项建议写在根目录的 `_config.stellar.yml`，或在 `_config.yml` 中使用 `theme_config:` 块
 
 修改后推送即可自动部署。
 
